@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shoe shop notes</title>
+<!-- Test fixture: patterns the checker once flagged by mistake. It must pass with no tells and nothing on the watch list. -->
+<style>
+  :root { --text: #1b1b1b; --muted: #5c5c5c; --accent: #0b5cad; --bg: #ffffff; }
+  body { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 18px; line-height: 1.55; color: var(--text); background: var(--bg); }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 20px; }
+  h1 { font-size: 44px; line-height: 1.1; margin: 0 0 12px; }
+  h2 { font-size: 26px; margin: 40px 0 8px; }
+  .byline { color: var(--muted); }
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 6px 0; }
+  .key { display: inline-block; width: 24px; height: 4px; margin-right: 8px; vertical-align: middle;
+         background: repeating-linear-gradient(90deg, var(--text) 0 8px, transparent 8px 12px); }
+  .grid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .grid a { display: block; color: var(--text); text-decoration: none; }
+  .grid span { display: block; font-size: 11px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Notes for a small shoe shop</h1>
+  <!-- Plain prose, not a placeholder name. -->
+  <p>Before you sell your company, gather three years of accounts.</p>
+  <!-- A class named "tag" on plain text: no fill, border or pill shape. -->
+  <p class="byline">Written by Ruth. <span class="tag">Awaiting a local check.</span></p>
+
+  <h2>Which sizes sell</h2>
+  <!-- Figures in a data table with a source. -->
+  <table>
+    <tr><th>Size</th><th>Share of sales</th></tr>
+    <tr><td>US 13</td><td>7.3%</td></tr>
+    <tr><td>US 14</td><td>3.1%</td></tr>
+    <tr><td>US 15</td><td>1.2%</td></tr>
+  </table>
+  <p>Source: the shop's sales for the year to October 2026.</p>
+
+  <h2>Sea and air through the year</h2>
+  <!-- A dashed legend key drawn with a repeating gradient, not a colour wash. -->
+  <p><span class="key"></span>The dashed line shows the daily air high.</p>
+
+  <h2>Shoes in stock</h2>
+  <!-- A real product grid: small labels inside links, not a mock-up. -->
+  <ul class="grid">
+    <li><a href="/shoe/1"><span>Runner one</span><span>Nike, US 14</span></a></li>
+    <li><a href="/shoe/2"><span>Runner two</span><span>Asics, US 14</span></a></li>
+    <li><a href="/shoe/3"><span>Boot three</span><span>Blundstone, US 15</span></a></li>
+    <li><a href="/shoe/4"><span>Boot four</span><span>Rossi, US 15</span></a></li>
+    <li><a href="/shoe/5"><span>Slide five</span><span>Adidas, US 14</span></a></li>
+    <li><a href="/shoe/6"><span>Slide six</span><span>Puma, US 16</span></a></li>
+    <li><a href="/shoe/7"><span>Court seven</span><span>Nike, US 16</span></a></li>
+    <li><a href="/shoe/8"><span>Court eight</span><span>Fila, US 14</span></a></li>
+    <li><a href="/shoe/9"><span>Loafer nine</span><span>Florsheim, US 15</span></a></li>
+    <li><a href="/shoe/10"><span>Loafer ten</span><span>Julius, US 17</span></a></li>
+  </ul>
+</main>
+</body>
+</html>

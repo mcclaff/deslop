@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tide times</title>
+<!-- Test fixture: a plain page that must pass with no tells and nothing on the watch list. The times are sample values. -->
+<style>
+  :root { --text: #1b1b1b; --muted: #5c5c5c; --accent: #0b5cad; --bg: #ffffff; --rule: #d9d9d9; }
+  body { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 18px; line-height: 1.55; color: var(--text); background: var(--bg); }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 20px; }
+  h1 { font-size: 44px; line-height: 1.1; margin: 0 0 12px; }
+  h2 { font-size: 26px; margin: 40px 0 8px; }
+  .lede { color: var(--muted); margin: 0 0 20px; }
+  .action { display: inline-block; background: var(--accent); color: #fff; padding: 12px 18px; border-radius: 6px; text-decoration: none; }
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 8px 0; border-bottom: 1px solid var(--rule); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Tide times</h1>
+  <p class="lede">High and low tides at the main beach for the next three days.</p>
+  <a class="action" href="#days">See the times</a>
+  <h2 id="days">Next three days</h2>
+  <table>
+    <tr><th>Day</th><th>High</th><th>Low</th><th>Height</th></tr>
+    <tr><td>Friday</td><td>9:40 am</td><td>3:55 pm</td><td>1.6 m</td></tr>
+    <tr><td>Saturday</td><td>10:25 am</td><td>4:40 pm</td><td>1.5 m</td></tr>
+    <tr><td>Sunday</td><td>11:10 am</td><td>5:20 pm</td><td>1.4 m</td></tr>
+  </table>
+  <h2>Before you swim</h2>
+  <ol>
+    <li>Check today's high tide.</li>
+    <li>Find the red and yellow flags.</li>
+    <li>Swim between them.</li>
+  </ol>
+</main>
+</body>
+</html>

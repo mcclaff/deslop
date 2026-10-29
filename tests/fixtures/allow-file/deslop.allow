@@ -1,0 +1,3 @@
+# Choices this design makes on purpose. One line per tell: id: reason
+dividers: the sheet copies a printed form with ruled lines
+deslop-allow all-caps: column heads on the printed form are capitals

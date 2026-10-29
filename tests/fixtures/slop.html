@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acme AI · Ship faster</title>
+<!-- Test fixture: a page built from every tell on the list. The checker must find each one. -->
+<style>
+  body { margin: 0; font-family: Inter, system-ui, sans-serif; color: #0f0f10; background: #fff; }
+  .nav { position: sticky; top: 0; z-index: 5; display: flex; gap: 24px; padding: 16px 40px; background: rgba(255,255,255,.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,.08); }
+  .nav a { color: #0f0f10; text-decoration: none; font-size: 15px; }
+  .hero { position: relative; overflow: hidden; text-align: center; padding: 96px 40px; color: #fff; background: linear-gradient(135deg, #7c3aed, #2563eb); }
+  .hero::before { content: ""; position: absolute; left: 10%; top: -20%; width: 480px; height: 480px; border-radius: 50%; background: #a855f7; filter: blur(120px); opacity: .6; }
+  .hero > * { position: relative; }
+  .eyebrow { margin: 0; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.7); }
+  h1 { margin: 16px auto; max-width: 1200px; font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: 112px; line-height: 1; letter-spacing: -0.05em; }
+  h1 em { font-style: italic; }
+  .grad { background: linear-gradient(90deg, #c084fc, #60a5fa); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .sub { max-width: 720px; margin: 0 auto; font-size: 18px; line-height: 1.5; color: rgba(255,255,255,.6); }
+  .ctas { display: flex; justify-content: center; gap: 12px; margin-top: 28px; }
+  .btn { display: inline-block; padding: 12px 20px; border-radius: 999px; font-size: 16px; text-decoration: none; }
+  .btn-primary { background: #fff; color: #111; }
+  .btn-ghost { color: #fff; border: 1px solid rgba(255,255,255,.4); }
+  section { padding: 80px 40px; }
+  section h2 { text-align: center; font-size: 40px; margin: 8px 0 32px; }
+  .crumb { margin: 0; text-align: center; font-family: "JetBrains Mono", monospace; font-size: 13px; color: #6b7280; }
+  .num { display: block; text-align: center; font-family: "JetBrains Mono", monospace; font-size: 14px; color: #9ca3af; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
+  .card { padding: 24px; border: 1px solid #e5e7eb; border-radius: 16px; background: #fff; }
+  .card p { color: #6b7280; }
+  .icon { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: rgba(124,58,237,.1); }
+  .pill { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 12px; background: rgba(124,58,237,.12); color: #7c3aed; }
+  hr { margin: 0; border: 0; border-top: 1px solid #e5e7eb; }
+  .logos { display: flex; justify-content: center; gap: 40px; }
+  .logos img { height: 28px; filter: grayscale(1); opacity: .6; }
+  .stats { display: flex; justify-content: center; gap: 32px; margin-top: 48px; }
+  .stats > div { padding: 16px 24px; border-radius: 12px; background: #fafafa; text-align: center; }
+  .stat-num { font-size: 48px; font-weight: 600; }
+  .stat-label { color: rgba(17,17,17,.45); }
+  .mock { max-width: 900px; margin: 0 auto; padding: 16px; border-radius: 16px; background: #0b0b0f; box-shadow: 0 0 80px rgba(124,58,237,.45); }
+  .dots { display: flex; gap: 6px; margin-bottom: 12px; }
+  .dots span { display: block; width: 12px; height: 12px; border-radius: 50%; }
+  .tiny { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .tiny span { font-size: 10px; color: #a1a1aa; }
+  .bento { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 160px; gap: 16px; max-width: 1100px; margin: 0 auto; }
+  .bento > div { border-radius: 20px; background: #f4f4f5; }
+  .b1 { grid-column: span 2; grid-row: span 2; }
+  .b2 { grid-column: span 2; }
+  .note { max-width: 700px; margin: 32px auto 0; padding: 16px 20px; border-left: 4px solid #7c3aed; border-radius: 8px; background: #faf5ff; }
+  blockquote.card { max-width: 700px; margin: 0 auto; }
+  footer { padding: 40px; color: #6b7280; }
+</style>
+</head>
+<body>
+<nav class="nav"><a href="#">Product</a><a href="#">Pricing</a><a href="#">Docs</a></nav>
+<header class="hero">
+  <p class="eyebrow">✨ Introducing Acme AI</p>
+  <h1>Ship <em>beautiful</em> products <span class="grad">faster</span></h1>
+  <p class="sub">Acme AI is the all-in-one platform that helps modern teams plan, build, test and ship world-class products faster than ever before. Connect your tools in seconds, automate the busywork, and let our intelligent agents handle reviews, releases and reporting while you focus on what matters most. Built for startups and trusted by enterprises, Acme scales with you from your first commit to your millionth customer. With real-time insights, seamless collaboration and enterprise-grade security baked in from day one, your whole organisation can move from idea to impact in record time. Start free today, invite your team, and see why thousands of builders already call Acme home.</p>
+  <div class="ctas"><a class="btn btn-primary" href="#">Get started</a><a class="btn btn-ghost" href="#">Learn more →</a></div>
+</header>
+<section data-aos="fade-up">
+  <p class="crumb">~/acme/features</p>
+  <span class="num">01 / Features</span>
+  <h2>Everything you need</h2>
+  <div class="grid3">
+    <div class="card"><div class="icon"><svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="#7c3aed"/></svg></div><h3>Fast by default</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.</p><span class="pill">New</span></div>
+    <div class="card"><div class="icon"><svg width="20" height="20" viewBox="0 0 20 20"><rect x="3" y="3" width="14" height="14" rx="3" fill="#7c3aed"/></svg></div><h3>Secure by design</h3><p>Every request is checked twice before it ever reaches you.</p><span class="pill">Beta</span></div>
+    <div class="card"><div class="icon"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 2 L18 18 L2 18 Z" fill="#7c3aed"/></svg></div><h3>Built to scale</h3><p>Grow from one user to one million without changing a thing.</p><span class="pill">AI</span></div>
+  </div>
+  <aside class="note">Tip: connect your repo to get started in minutes.</aside>
+</section>
+<hr>
+<section data-aos="fade-up">
+  <span class="num">02 / Proof</span>
+  <h2>Trusted by teams at</h2>
+  <div class="logos">
+    <img alt="Globex" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='28'%3E%3Crect width='96' height='28' rx='4' fill='%23111'/%3E%3C/svg%3E">
+    <img alt="Initech" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='28'%3E%3Crect width='96' height='28' rx='4' fill='%23111'/%3E%3C/svg%3E">
+    <img alt="Hooli" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='28'%3E%3Crect width='96' height='28' rx='4' fill='%23111'/%3E%3C/svg%3E">
+    <img alt="Umbrella" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='28'%3E%3Crect width='96' height='28' rx='4' fill='%23111'/%3E%3C/svg%3E">
+    <img alt="Contoso" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='28'%3E%3Crect width='96' height='28' rx='4' fill='%23111'/%3E%3C/svg%3E">
+  </div>
+  <div class="stats">
+    <div><div class="stat-num">10x</div><div class="stat-label">faster builds</div></div>
+    <div><div class="stat-num">99.9%</div><div class="stat-label">uptime</div></div>
+    <div><div class="stat-num">500+</div><div class="stat-label">teams</div></div>
+  </div>
+</section>
+<hr>
+<section>
+  <span class="num">03 / Product</span>
+  <h2>See it in action</h2>
+  <div class="mock">
+    <div class="dots"><span style="background:#ff5f57"></span><span style="background:#febc2e"></span><span style="background:#28c840"></span></div>
+    <div class="tiny">
+      <span>Revenue</span><span>Users</span><span>Churn</span><span>MRR</span>
+      <span>Signups</span><span>Trials</span><span>Upgrades</span><span>Refunds</span>
+      <span>Latency</span><span>Errors</span><span>Deploys</span><span>Builds</span>
+      <span>Tickets</span><span>Replies</span><span>Pending</span><span>Closed</span>
+    </div>
+  </div>
+</section>
+<hr>
+<section>
+  <h2>Built for every team</h2>
+  <div class="bento"><div class="b1"></div><div class="b2"></div><div></div><div></div><div></div><div></div></div>
+</section>
+<section>
+  <h2>How it works</h2>
+  <svg width="600" height="200" viewBox="0 0 600 200" style="display:block;margin:0 auto">
+    <defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker></defs>
+    <rect x="10" y="70" width="140" height="60" rx="8" fill="#f4f4f5" stroke="#7c3aed"/>
+    <rect x="230" y="70" width="140" height="60" rx="8" fill="#f4f4f5" stroke="#7c3aed"/>
+    <rect x="450" y="70" width="140" height="60" rx="8" fill="#f4f4f5" stroke="#7c3aed"/>
+    <line x1="150" y1="100" x2="228" y2="100" stroke="#7c3aed" marker-end="url(#arrow)"/>
+    <line x1="370" y1="100" x2="448" y2="100" stroke="#7c3aed" marker-end="url(#arrow)"/>
+    <text x="80" y="105" text-anchor="middle">Input</text>
+    <text x="300" y="105" text-anchor="middle">Model</text>
+    <text x="520" y="105" text-anchor="middle">Output</text>
+  </svg>
+</section>
+<section>
+  <blockquote class="card">“Acme changed how our whole team ships.” <cite>Sarah Chen, CEO at TechCorp</cite></blockquote>
+</section>
+<footer>
+  <p>5 min read · Design</p>
+  <p>Oct 2026 · Product</p>
+  <p>v2.1 · Changelog</p>
+  <a href="#">Read the docs →</a>
+</footer>
+</body>
+</html>
